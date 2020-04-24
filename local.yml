@@ -1,7 +1,15 @@
 - hosts: localhost
   become: true
   tasks:
-    - name: Install packages
+    - name: Install {{item}}
       apt: name={{item}}
       with_items:
         - htop
+        - google-chrome
+        - firefox
+        - opera
+        - code
+        - sublime-text
+        - virtualbox
+        - vlc
+        - simplescreenrecorder
